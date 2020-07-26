@@ -5,9 +5,11 @@ import {useSelector} from 'react-redux';
 import {
     Container,
     AddButton,
-    AddButtonImage
+    AddButtonImage,
+    NotesList
 } from './styles';
 
+import NoteItem from '../../components/NoteItem';
 
 export default () =>{
 
@@ -25,9 +27,23 @@ export default () =>{
         });
     },[]);
 
+    const handleNotePress = () =>{
+        
+    }
+
     return(
         <Container>
-            
+            <NotesList 
+                data={list}
+                renderItem={({item,index})=>(
+                    <NoteItem
+                        data={item}
+                        index={index}
+                        onPress={handleNotePress}
+                    />
+                )}
+                keyExtractor={(item,index)=>index.toString()}
+            />
         </Container>
     )
 };

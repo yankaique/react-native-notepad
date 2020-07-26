@@ -16,3 +16,8 @@ export const AddButtonImage = styled.Image`
     height:24px;
     width:24px;
 `;
+
+export const NotesList = styled.FlatList`
+    flex:1;
+    width:100%;
+`;
