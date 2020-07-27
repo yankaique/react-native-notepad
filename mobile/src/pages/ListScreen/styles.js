@@ -21,3 +21,22 @@ export const NotesList = styled.FlatList`
     flex:1;
     width:100%;
 `;
+
+export const NoNotes = styled.View`
+    flex:1;
+    justify-content: center;
+    align-items:center;
+    opacity:0.3;
+`;
+
+export const NoNotesImage = styled.Image`
+    width:70px;
+    height:70px;
+    margin-bottom:10px;
+`;
+
+export const NoNotesText = styled.Text`
+    color:#fff;
+    font-size:20;
+`;
+
