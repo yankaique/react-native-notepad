@@ -3,8 +3,8 @@ import {Box,Title} from './styles';
 
 export default ({data, index,onPress}) =>{
     return(
-        <Box>
-            <Title>Titulo da anotação</Title>
+        <Box onPress={()=>onPress(index)}>
+            <Title>{data.title}</Title>
         </Box>
     );
 };
