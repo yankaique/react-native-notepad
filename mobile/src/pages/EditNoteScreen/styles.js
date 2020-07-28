@@ -22,3 +22,22 @@ export const BodyInput = styled.TextInput`
     font-size:15px;
     color:#FFF;
 `;
+
+export const SaveButton = styled.TouchableHighlight`
+    margin-right:15px;
+`;
+
+export const SaveButtonImage = styled.Image`
+    width:20px;
+    height:20px;
+`;
+
+export const CloseButton = styled.TouchableHighlight`
+    margin-left:15px;
+`;
+
+export const CloseButtonImage = styled.Image`
+    width:20px;
+    height:20px;
+`;
+

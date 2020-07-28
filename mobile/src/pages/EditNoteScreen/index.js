@@ -1,16 +1,64 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect, useLayoutEffect} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
+import {usseNavigation, useRoute, useNavigation} from '@react-navigation/native';
+ 
 import {
     Container,
     TitleInput,
-    BodyInput
+    BodyInput,
+    SaveButton,
+    SaveButtonImage,
+    CloseButton,
+    CloseButtonImage
 } from './styles';
 
-
 export default () =>{
+    const navigation = useNavigation();
+    const route = useRoute();
+    const dispatch = useDispatch();
+    const list = useSelector(state => state.notes.list);
+
 
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
+    const [status,setStatus] = useState('new');
 
+    useEffect(()=>{
+        if(route.params?.key != undefined && list[route.params.key ]){
+            setStatus('edit');
+            setTitle(list[route.params.key].title);
+            setBody(list[route.params.key].body);
+
+        }
+    },[]);
+
+    useLayoutEffect(()=>{
+        navigation.setOptions({
+            title:status == 'new' ? 'Nova anotação' : 'Editar Anotação',
+            headerRight: ()=>(
+                <SaveButton  onPress={handleSaveButton}>
+                    <SaveButtonImage source={require('../../assets/save.png')} />
+                </SaveButton>
+            ),
+            headerLeft:()=>(
+                <CloseButton  onPress={handleCloseButton}>
+                    <CloseButtonImage source={require('../../assets/close.png')} />
+                </CloseButton>
+            )
+        })
+    },[status, title, body]);
+
+    const handleSaveButton = () =>{
+        if(title != '' && body !=''){
+            
+        }else{
+            alert('Preencha título e corpo');
+        }
+    }
+
+    const handleCloseButton = () =>{
+        navigation.goBack();
+    }
 
     return(
         <Container>
