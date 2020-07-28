@@ -1,6 +1,6 @@
 import React,{useState, useEffect, useLayoutEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import {usseNavigation, useRoute, useNavigation} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
  
 import {
     Container,
@@ -9,7 +9,9 @@ import {
     SaveButton,
     SaveButtonImage,
     CloseButton,
-    CloseButtonImage
+    CloseButtonImage,
+    DeleteButton,
+    DeleteButtonText
 } from './styles';
 
 export default () =>{
@@ -36,12 +38,12 @@ export default () =>{
         navigation.setOptions({
             title:status == 'new' ? 'Nova anotação' : 'Editar Anotação',
             headerRight: ()=>(
-                <SaveButton  onPress={handleSaveButton}>
+                <SaveButton underlayColor="transparent" onPress={handleSaveButton}>
                     <SaveButtonImage source={require('../../assets/save.png')} />
                 </SaveButton>
             ),
             headerLeft:()=>(
-                <CloseButton  onPress={handleCloseButton}>
+                <CloseButton underlayColor="transparent" onPress={handleCloseButton}>
                     <CloseButtonImage source={require('../../assets/close.png')} />
                 </CloseButton>
             )
@@ -78,6 +80,17 @@ export default () =>{
         navigation.goBack();
     }
 
+    const handleDeleteNoteButton = () =>{
+        dispatch({
+            type:'DEL_NOTE',
+            payload:{
+                key:route.params.key
+            }
+        });
+
+        navigation.goBack();
+    }
+
     return(
         <Container>
             <TitleInput 
@@ -95,6 +108,11 @@ export default () =>{
                 multiline={true}
                 textAlignVertical="top"
             />
+            {status=='edit' && 
+                <DeleteButton underlayColor="#FF0000" onPress={handleDeleteNoteButton}> 
+                    <DeleteButtonText>Excluir Anotação</DeleteButtonText>
+                </DeleteButton>
+            }
         </Container>
     )
 }
