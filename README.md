@@ -18,28 +18,29 @@
 </div>
 
 
-## 🏁 Introduction
+<h3 id="introduction"> 🏁 Introduction </h3>
 <p>Devs notes is an application for portable cell phones in order to store notes made by the user.</p>
 
+<br>
 
-## 🚀 Tecnologies
+<h3 id="tecnologies">  🚀 Tecnologies </h3>
 
 - [React Native]("https://reactnative.dev/")
 - [React Navigation]("https://reactnavigation.org/")
 - [Redux]("https://redux.js.org/")
 
 
-## 📲 Install 
+<h3 id="install"> 📲 Install </h3>
 
 1. clone the repository using `git clone`
 2. Enter the [mobile](mobile) folder
 3. Install packages using `npm i` 
 4. Run `react-native run android` or `react-native run android ios`
 <br>
-> If you use Expo run `expo start`
+If you use **Expo** run `expo start`
 
 
-## 🔒 Licence
+<h3 id="licence"> 🔒 Licence </h3>
 This project is under GNU license. See the [LICENSE](LICENSE.md) file for more details.
 <br>
 
@@ -57,6 +58,3 @@ This project is under GNU license. See the [LICENSE](LICENSE.md) file for more d
         <img src="/github/instagram.png"/>
     </a>
 </h6>
-
-
-
