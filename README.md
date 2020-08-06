@@ -40,7 +40,9 @@ If you use **Expo** run `expo start`
 
 
 <h3 id="licence"> 🔒 Licence </h3>
+
 This project is under GNU license. See the [LICENSE](LICENSE.md) file for more details.
+
 <br>
 
 ---
