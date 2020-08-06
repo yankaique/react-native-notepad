@@ -21,8 +21,6 @@
 <h3 id="introduction"> 🏁 Introduction </h3>
 <p>Devs notes is an application for portable cell phones in order to store notes made by the user.</p>
 
-<br>
-
 <h3 id="tecnologies">  🚀 Tecnologies </h3>
 
 - [React Native]("https://reactnative.dev/")
@@ -37,6 +35,7 @@
 3. Install packages using `npm i` 
 4. Run `react-native run android` or `react-native run android ios`
 <br>
+
 If you use **Expo** run `expo start`
 
 
