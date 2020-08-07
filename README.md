@@ -10,7 +10,7 @@
     <a href="#introduction">Introduction</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#tecnologies">Tecnologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#install">Install</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#licence">Licence</a>
+    <a href="#license">License</a>
 </p>
 
 <div align="center">
@@ -39,7 +39,7 @@
 If you use **Expo** run `expo start`
 
 
-<h3 id="licence"> 🔒 Licence </h3>
+<h3 id="license"> 🔒 License </h3>
 
 This project is under GNU license. See the [LICENSE](LICENSE.md) file for more details.
 
