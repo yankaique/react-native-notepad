@@ -33,7 +33,7 @@
 1. clone the repository using `git clone`
 2. Enter the [mobile](mobile) folder
 3. Install packages using `npm i` 
-4. Run `react-native run android` or `react-native run android ios`
+4. Run `react-native run android` or `react-native run ios`
 <br>
 
 If you use **Expo** run `expo start`
